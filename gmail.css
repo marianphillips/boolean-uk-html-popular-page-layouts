@@ -1,38 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    display: grid;
-    height: 100vh;
-    grid-template:
-    "header header header header" 60px
+  display: grid;
+  height: 100vh;
+  grid-template:
+    "header header header header" 75px
     "side main settings icons" 1fr /
-    1fr 3fr 1fr 0.4fr;
+    250px minmax(400px, 1fr) 250px 60px;
 }
 
 .header {
-    grid-area: header;
-    background-color:blueviolet;
+  grid-area: header;
+  background-color: blueviolet;
 }
 
 .side {
-    grid-area: side;
-    background-color: coral;
+  grid-area: side;
+  background-color: coral;
+  display: grid;
+  height: 100vh;
+  grid-template:
+    "compose" 80px
+    "mail" minmax(80px, 250px)
+    "meet" 150px
+    "hangouts" 150px
+    "chats" 1fr /
+    1fr;
 }
 
 .main {
-    grid-area: main;
-    background-color:greenyellow;
+  grid-area: main;
+  background-color: greenyellow;
 }
 
 .settings {
-    grid-area: settings;
-    background-color: pink;
+  grid-area: settings;
+  background-color: pink;
 }
 
 .icons {
-    grid-area: icons;
-    background-color:powderblue
+  grid-area: icons;
+  background-color: powderblue;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template:
+      "header header header" 75px
+      "side main icons" 1fr /
+      250px minmax(500px, 1fr) 60px;
+  }
+  .settings {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template:
+      "header header" 75px
+      "side main" 1fr /
+      250px minmax(500px, 1fr);
+  }
+  .icons {
+    display: none;
+  }
+}
+
+/** Grid within grid**/
+
+.compose {
+  grid-area: compose;
+  background-color: teal;
+}
+
+.mail {
+  grid-area: mail;
+  background-color: tomato;
+}
+
+.meet {
+  grid-area: meet;
+  background-color: violet;
+}
+
+.hangouts {
+  grid-area: hangouts;
+  background-color: yellow;
+}
+
+.chats {
+  grid-area: chats;
 }
