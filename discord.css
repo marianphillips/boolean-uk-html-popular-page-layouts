@@ -7,10 +7,10 @@
     display: grid;
     height: 100vh;
     grid-template:
-    "icons group header header" 50px
+    "icons group header header" 60px
     "icons channels main people" 1fr 
-    "icons call main people" 50px/
-    60px 180px 1fr 180px;
+    "icons call main people" 60px/
+    75px 250px 1fr 250px;
 }
 
 .header {
