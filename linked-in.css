@@ -39,3 +39,32 @@
     background-color: blueviolet;
 }
 
+@media screen and (max-width: 1200px) {
+    .content {
+        padding: 30px 100px 0px 100px;
+}
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        grid-template:
+        "you main" 1fr /
+        30% 70%;
+        padding: 30px 50px 0px 50px;    
+}
+    .news {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        grid-template:
+        "main" 1fr /
+        1fr;
+        padding: 30px 30px 0px 30px;
+}
+    .you {
+        display: none;
+    }
+}
