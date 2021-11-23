@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template:
+    "icons group header header" 50px
+    "icons channels main people" 1fr 
+    "icons call main people" 50px/
+    60px 180px 1fr 180px;
+}
+
+.header {
+    grid-area: header;
+    background-color:blueviolet;
+}
+
+.group {
+    grid-area: group;
+    background-color: coral;
+}
+
+.main {
+    grid-area: main;
+    background-color:greenyellow;
+}
+
+.icons {
+    grid-area: icons;
+    background-color: pink;
+}
+
+.channels {
+    grid-area: channels;
+    background-color:seagreen;
+}
+
+.people {
+    grid-area: people;
+    background-color:powderblue;
+}
+
+.call {
+    grid-area: call;
+    background-color:tan;
+}

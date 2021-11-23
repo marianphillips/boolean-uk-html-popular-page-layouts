@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template:
+    "header header header header" 60px
+    "side main settings icons" 1fr /
+    1fr 3fr 1fr 0.4fr;
+}
+
+.header {
+    grid-area: header;
+    background-color:blueviolet;
+}
+
+.side {
+    grid-area: side;
+    background-color: coral;
+}
+
+.main {
+    grid-area: main;
+    background-color:greenyellow;
+}
+
+.settings {
+    grid-area: settings;
+    background-color: pink;
+}
+
+.icons {
+    grid-area: icons;
+    background-color:powderblue
+}

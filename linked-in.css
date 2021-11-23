@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template: 
+    "header" 50px
+    "content" 1fr /
+    1fr;
+}
+
+.header {
+    background-color: blue;
+}
+.content {
+    display:grid;
+    background-color: lightgray;
+    grid-template:
+        "you main news" 1fr /
+        22% 56% 22%;
+    padding: 30px 150px 0px 150px;
+    column-gap: 15px;
+    }
+
+.you {
+    grid-area: you;
+    background-color: chartreuse;
+}
+
+.main {
+    grid-area: main;
+    background-color: red;
+}
+
+.news {
+    grid-area: news;
+    background-color: blueviolet;
+}
+
